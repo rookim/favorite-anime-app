@@ -10,7 +10,9 @@ class AnimesController < ApplicationController
       "creator": params[:creator],
       "genre": params[:genre],
       "demographic": params[:demographic],
-      "original": params[:original]
+      "original": params[:original],
+      "japanese_title": params[:japanese_title],
+      "premiered": params[:premiered]
     )
     if new_anime.save
       render json: new_anime.as_json
@@ -30,6 +32,8 @@ class AnimesController < ApplicationController
     anime.genre = params[:genre] || anime.genre
     anime.demographic = params[:demographic] || anime.demographic
     anime.original = params[:original] || anime.original
+    anime.japanese_title = params[:japanese_title] || anime.japanese_title
+    anime.premiered = params[:premiered] || anime.premiered
     anime.save
     if anime.save
       render json: anime.as_json

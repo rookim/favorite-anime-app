@@ -17,9 +17,9 @@ Content-Type: application/json
 GET http://localhost:3000/anime/2
 
 ### update method
-PATCH http://localhost:3000/anime/5
+PATCH http://localhost:3000/anime/2
 Content-Type: application/json
 
 {
-  "demographic": "shoujo"
+  "japanese_title": "転生したらスライムだった件"
 }
