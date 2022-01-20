@@ -13,8 +13,11 @@ class AnimesController < ApplicationController
       "demographic": params[:demographic],
       "original": params[:original]
     )
-    new_anime.save
-    render json: new_anime.as_json
+    if new_anime.save
+      render json: new_anime.as_json
+    else
+      render json: {errors: new_anime.errors.full_messages}, status: :unprocessable_entity
+    end
   end
-  
+
 end

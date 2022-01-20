@@ -6,9 +6,5 @@ POST http://localhost:3000/anime
 Content-Type: application/json
 
 {
-  "title": "That Time I Got Reincarnated as a Slime",
-  "creator": "Fuse and Mitz Vah",
-  "genre": "action, adventure, comedy, fantasy",
-  "demographic": "shounen",
-  "original": false
+  "title": "Naruto Shippuden"
 }
