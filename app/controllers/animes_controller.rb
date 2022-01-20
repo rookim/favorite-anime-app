@@ -20,4 +20,8 @@ class AnimesController < ApplicationController
     end
   end
 
+  def show
+    render json: Anime.find(params[:id])
+  end
+
 end

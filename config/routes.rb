@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get "/anime" => "animes#index"
   post "/anime" => "animes#create"
+  get "/anime/:id" => "animes#show"
 end

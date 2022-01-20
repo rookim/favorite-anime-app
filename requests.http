@@ -8,3 +8,6 @@ Content-Type: application/json
 {
   "title": "Naruto Shippuden"
 }
+
+### show method
+GET http://localhost:3000/anime/2
