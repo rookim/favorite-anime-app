@@ -1,6 +1,5 @@
 class AnimesController < ApplicationController
-  validates :title, :creator, :genre, :demographic, :original, presence: true
-  
+
   def index
     anime = Anime.all
     render json: anime.as_json
@@ -17,4 +16,5 @@ class AnimesController < ApplicationController
     new_anime.save
     render json: new_anime.as_json
   end
+  
 end
