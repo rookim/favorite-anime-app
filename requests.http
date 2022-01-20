@@ -23,3 +23,6 @@ Content-Type: application/json
 {
   "japanese_title": "転生したらスライムだった件"
 }
+
+### destroy method
+DELETE http://localhost:3000/anime

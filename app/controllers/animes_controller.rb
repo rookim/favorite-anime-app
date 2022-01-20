@@ -42,4 +42,11 @@ class AnimesController < ApplicationController
     end
   end
 
+  def destroy
+    anime = Anime.find(params[:id])
+    anime.destroy
+
+    render json: {message: "#{anime.title} has been removed from the database....."}
+  end
+
 end
