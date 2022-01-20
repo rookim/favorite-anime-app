@@ -1,8 +1,7 @@
 class AnimesController < ApplicationController
 
   def index
-    anime = Anime.all
-    render json: anime.as_json
+    render json: Anime.all.as_json
   end
 
   def create
@@ -22,6 +21,21 @@ class AnimesController < ApplicationController
 
   def show
     render json: Anime.find(params[:id])
+  end
+
+  def update
+    anime = Anime.find(params[:id])
+    anime.title = params[:title] || anime.title
+    anime.creator = params[:creator] || anime.creator
+    anime.genre = params[:genre] || anime.genre
+    anime.demographic = params[:demographic] || anime.demographic
+    anime.original = params[:original] || anime.original
+    anime.save
+    if anime.save
+      render json: anime.as_json
+    else
+      render json: {errors: anime.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
 end

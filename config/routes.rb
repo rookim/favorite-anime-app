@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/anime" => "animes#index"
   post "/anime" => "animes#create"
   get "/anime/:id" => "animes#show"
+  patch "/anime/:id" => "animes#update"
 end

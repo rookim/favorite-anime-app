@@ -6,8 +6,20 @@ POST http://localhost:3000/anime
 Content-Type: application/json
 
 {
-  "title": "Naruto Shippuden"
+  "title": "Maid Sama!",
+  "creator": "Hiro Fujiwara",
+  "genre": "romance, slice of life, comedy",
+  "demographic": "shoujo",
+  "original": "false"
 }
 
 ### show method
 GET http://localhost:3000/anime/2
+
+### update method
+PATCH http://localhost:3000/anime/5
+Content-Type: application/json
+
+{
+  "demographic": "shoujo"
+}
