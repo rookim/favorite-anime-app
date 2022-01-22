@@ -6,22 +6,24 @@ POST http://localhost:3000/anime
 Content-Type: application/json
 
 {
-  "title": "Maid Sama!",
-  "creator": "Hiro Fujiwara",
-  "genre": "romance, slice of life, comedy",
-  "demographic": "shoujo",
-  "original": "false"
+  "title": "Demon Slayer",
+  "creator": "Koyoharu Gotouge",
+  "genre": "action, supernatural",
+  "demographic": "shounen",
+  "original": "false",
+  "japanese_title": "鬼滅の刃",
+  "premiered": "2019-4-6"
 }
 
 ### show method
 GET http://localhost:3000/anime/2
 
 ### update method
-PATCH http://localhost:3000/anime/2
+PATCH http://localhost:3000/anime/1
 Content-Type: application/json
 
 {
-  "japanese_title": "転生したらスライムだった件"
+  "genre": "action, adventure, comedy, ninja"
 }
 
 ### destroy method
