@@ -23,7 +23,7 @@ PATCH http://localhost:3000/anime/1
 Content-Type: application/json
 
 {
-  "genre": "action, adventure, comedy, ninja"
+  "original": "hello"
 }
 
 ### destroy method

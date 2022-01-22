@@ -31,7 +31,7 @@ class AnimesController < ApplicationController
     anime.creator = params[:creator] || anime.creator
     anime.genre = params[:genre] || anime.genre
     anime.demographic = params[:demographic] || anime.demographic
-    anime.original = params[:original] || anime.original
+    anime.original = params[:original].to_s || anime.original.to_s
     anime.japanese_title = params[:japanese_title] || anime.japanese_title
     anime.premiered = params[:premiered] || anime.premiered
     anime.save
